@@ -1,4 +1,4 @@
 *.bak
 compiled/
 output.txt
-testFile.txt
+input.txt
