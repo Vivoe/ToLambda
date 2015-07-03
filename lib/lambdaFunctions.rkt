@@ -9,7 +9,8 @@
          l-true ls-true
          l-false ls-false
          ls-lambda
-         eval-bool eval-nat eval-int eval-rat
+         eval-bool eval-nat eval-int
+         (rename-out [eval-rat eval-num])
          )
 
 ;l is the lambda representation (code)
@@ -28,7 +29,7 @@
 
 ;a :: string, b :: string
 (define (ls-pair a b)
-  (string-append "(λ (z) ((z " a ") " b "))"))
+  (string-append "(λ (p) ((p " a ") " b "))"))
 
 (define l-identity (λ (x) x))
 (define ls-identity "(λ (x) x)")

@@ -95,10 +95,10 @@
        (println (eval-int (run-string (toInteger -10)))) ;=> n, n in Z. n < 0
        (println (eval-int (run-string (toInteger 0)))) ;=> 0, n in Z. n = 0
        
-       (println (eval-rat (run-string (toRational (/ 3 2))))) ;=> 3/2, n in Q
-       (println (eval-rat (run-string (toRational (/ 3 -1))))) ;=> -3, n in Q
-       (println (eval-rat (run-string (toRational 1)))) ;=> 1
-       (println (eval-rat (run-string (toRational 0)))) ;=> 0
+       (println (eval-num (run-string (toRational (/ 3 2))))) ;=> 3/2, n in Q
+       (println (eval-num (run-string (toRational (/ 3 -1))))) ;=> -3, n in Q
+       (println (eval-num (run-string (toRational 1)))) ;=> 1
+       (println (eval-num (run-string (toRational 0)))) ;=> 0
        ]
       [(equal? 'misc group)
        (println "Misc")
@@ -122,10 +122,10 @@
        (println (eval-int (run-string (add-int (toInteger -1) (toInteger 1))))) ;=> 0
        (println (eval-int (run-string (add-int (toInteger 0) (toInteger 0))))) ;=> 0
        (println "rats")
-       (println (eval-rat (run-string (add-rat (toRational (/ 3 2)) (toRational (/ 5 3)))))) ;=> 19/6
-       (println (eval-rat (run-string (add-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 3/2
-       (println (eval-rat (run-string (add-rat (toRational (/ 3 2)) (toRational (/ -2 5)))))) ;=> 11/10
-       (println (eval-rat (run-string (add-rat (toRational (/ -3 2)) (toRational (/ -2 5)))))) ;=> -19/10
+       (println (eval-num (run-string (add-rat (toRational (/ 3 2)) (toRational (/ 5 3)))))) ;=> 19/6
+       (println (eval-num (run-string (add-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 3/2
+       (println (eval-num (run-string (add-rat (toRational (/ 3 2)) (toRational (/ -2 5)))))) ;=> 11/10
+       (println (eval-num (run-string (add-rat (toRational (/ -3 2)) (toRational (/ -2 5)))))) ;=> -19/10
        ]
       [(equal? 'sub group)
        (print "sub")
@@ -136,12 +136,12 @@
        (println (eval-int (run-string (sub-int (toInteger -1) (toInteger 3))))) ;=> -4
        (println (eval-int (run-string (sub-int (toInteger -1) (toInteger -3))))) ;=> 2
        (println "rats")
-       (println (eval-rat (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ 5 3)))))) ;=> -1/6
-       (println (eval-rat (run-string (sub-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 3/2
-       (println (eval-rat (run-string (sub-rat (toRational 0) (toRational (/ 3 2)))))) ;=> -3/2
-       (println (eval-rat (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ 3 2)))))) ;=> 0
-       (println (eval-rat (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ -2 5)))))) ;=> 19/10
-       (println (eval-rat (run-string (sub-rat (toRational (/ -3 2)) (toRational (/ -2 5)))))) ;=> -11/10
+       (println (eval-num (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ 5 3)))))) ;=> -1/6
+       (println (eval-num (run-string (sub-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 3/2
+       (println (eval-num (run-string (sub-rat (toRational 0) (toRational (/ 3 2)))))) ;=> -3/2
+       (println (eval-num (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ 3 2)))))) ;=> 0
+       (println (eval-num (run-string (sub-rat (toRational (/ 3 2)) (toRational (/ -2 5)))))) ;=> 19/10
+       (println (eval-num (run-string (sub-rat (toRational (/ -3 2)) (toRational (/ -2 5)))))) ;=> -11/10
        ]
       [(equal? 'mult group)
        (println "mult")
@@ -156,16 +156,16 @@
        (println (eval-int (run-string (mult-int (toInteger 0) (toInteger 0))))) ;=> 0
        (println (eval-int (run-string (mult-int (toInteger -3) (toInteger -3))))) ;=> 9
        (println "rats")
-       (println (eval-rat (run-string (mult-rat (toRational (/ 3 2)) (toRational (/ 4 2)))))) ;=> 3
-       (println (eval-rat (run-string (mult-rat (toRational (/ 3 2)) (toRational (/ 4 -2)))))) ;=> -3
-       (println (eval-rat (run-string (mult-rat (toRational (/ 3 2)) (toRational 1))))) ;=> 3/2
-       (println (eval-rat (run-string (mult-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 0
+       (println (eval-num (run-string (mult-rat (toRational (/ 3 2)) (toRational (/ 4 2)))))) ;=> 3
+       (println (eval-num (run-string (mult-rat (toRational (/ 3 2)) (toRational (/ 4 -2)))))) ;=> -3
+       (println (eval-num (run-string (mult-rat (toRational (/ 3 2)) (toRational 1))))) ;=> 3/2
+       (println (eval-num (run-string (mult-rat (toRational (/ 3 2)) (toRational 0))))) ;=> 0
        ]
       [(equal? 'div group)
        (println "div")
        (println "rat")
-       (println (eval-rat (run-string (div-rat (toRational (/ 3 2)) (toRational 2))))) ;=>3/4
-       (println (eval-rat (run-string (div-rat (toRational (/ 3 2)) (toRational -2))))) ;=>-3/4
+       (println (eval-num (run-string (div-rat (toRational (/ 3 2)) (toRational 2))))) ;=>3/4
+       (println (eval-num (run-string (div-rat (toRational (/ 3 2)) (toRational -2))))) ;=>-3/4
        ]
       ))
   

@@ -3,7 +3,10 @@
 (require "utils.rkt")
 (require "lambdaFunctions.rkt")
 
-(provide ls-and ls-not ls-or)
+(provide ls-and ls-not ls-or ls-bool)
+
+(define (ls-bool b)
+  (if b ls-true ls-false))
 
 (define ls-and 
   (string-append 
