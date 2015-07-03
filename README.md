@@ -3,6 +3,8 @@ A primitive compiler that takes a subset of Racket and converts it to Lambda cal
 
 To get started, run main.rkt and run commands in the interaction window. 
 
+Note: No effort was made (yet!) to make this any sort of readable or compact. Have fun reading the lambdas!
+
 Recently added features:
 If
 
