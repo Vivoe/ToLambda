@@ -1,3 +1,3 @@
 #lang racket
 
-(provide + * #%module-begin #%datum #%app #%top #%top-interaction)
+(provide + * - / if and or not #%module-begin #%datum #%app #%top #%top-interaction)

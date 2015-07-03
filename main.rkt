@@ -13,3 +13,5 @@
 ;                               (ls-sub (ls-mult (ls-num (/ 3 2)) (ls-num (/ 5 2)))
 ;                                                (ls-num (/ 10 4))))))
 ;=>5/4
+
+;To get the actual lambda calulus code, do not include eval-rat and run-string.
